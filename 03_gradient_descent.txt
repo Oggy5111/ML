@@ -1,0 +1,19 @@
+# Function: y = (x + 3)^2
+def f(x):
+    return (x + 3)**2
+
+# Derivative: dy/dx = 2(x + 3)
+def df(x):
+    return 2 * (x + 3)
+
+# Gradient Descent
+x = 2               # starting point
+lr = 0.1            # learning rate
+epochs = 50         # iterations
+
+for i in range(epochs):
+    grad = df(x)
+    x = x - lr * grad
+
+print("Local minimum at x =", x)
+print("Minimum value y =", f(x))
